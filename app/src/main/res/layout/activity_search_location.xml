@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryBackground="@color/white"
+        android:queryHint="Enter City Name" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchView"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error fetching weather data"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
